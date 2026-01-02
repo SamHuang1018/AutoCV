@@ -8,24 +8,18 @@ jobs:
         include:
           - file: cv_en
             lang: en
-            compiler: pdflatex
           - file: cv_zh
             lang: zh
-            compiler: xelatex
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      
-      - name: Compile LaTeX - ${{ matrix.lang }}
-        uses: xu-cheng/latex-action@v3
+      - name: Build LaTeX - ${{ matrix.lang }}
+        uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ matrix.file }}.tex
-          compiler: ${{ matrix.compiler }}
-          args: -interaction=nonstopmode -file-line-error
-      
+          root_file: ${{ matrix.file }}
+          working_directory: .
       - name: move
         run: mkdir -p github_artifacts && mv ./${{ matrix.file }}.pdf ./github_artifacts/
-      
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
