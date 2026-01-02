@@ -16,19 +16,13 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
       
-      - name: Install Chinese fonts
-        if: matrix.lang == 'zh'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
-      
-      - name: Build LaTeX - ${{ matrix.lang }}
-        uses: dante-ev/latex-action@latest
+      - name: Compile LaTeX - ${{ matrix.lang }}
+        uses: xu-cheng/latex-action@v3
         with:
-          root_file: ${{ matrix.file }}
-          working_directory: .
+          root_file: ${{ matrix.file }}.tex
           compiler: ${{ matrix.compiler }}
           args: -interaction=nonstopmode -file-line-error
+          latexmk_use_xelatex: ${{ matrix.lang == 'zh' }}
       
       - name: move
         run: mkdir -p github_artifacts && mv ./${{ matrix.file }}.pdf ./github_artifacts/
