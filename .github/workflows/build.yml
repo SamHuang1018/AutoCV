@@ -22,7 +22,6 @@ jobs:
           root_file: ${{ matrix.file }}.tex
           compiler: ${{ matrix.compiler }}
           args: -interaction=nonstopmode -file-line-error
-          latexmk_use_xelatex: ${{ matrix.lang == 'zh' }}
       
       - name: move
         run: mkdir -p github_artifacts && mv ./${{ matrix.file }}.pdf ./github_artifacts/
