@@ -20,6 +20,7 @@
 \usepackage{multirow}
 
 % 中文支援
+\usepackage{CJKutf8}
 \usepackage{xeCJK}
 \setCJKmainfont{Noto Sans CJK TC}
 
@@ -69,13 +70,13 @@
 %----------------------------------------------------------------------------------------
 %	HEADER
 %----------------------------------------------------------------------------------------
-\begin{tabularx}{\linewidth}{@{} C @{}}
+\begin{CJK*}{UTF8}{gbsn}{tabularx}{\linewidth}{@{} C @{}}
 \Huge{黃柏翰 (Sam Huang)} \\[7.5pt]
 \href{https://github.com/SamHuang1018}{\raisebox{-0.05\height}\faGithub\ SamHuang1018} \ $|$ \ 
 \href{https://www.linkedin.com/in/sam-huang-329006244}{\raisebox{-0.05\height}\faLinkedin\ sam-huang} \ $|$ \ 
 \href{mailto:ju810609@email.com}{\raisebox{-0.05\height}\faEnvelope \ ju810609@email.com} \ $|$ \ 
 \href{tel:0930134819}{\raisebox{-0.05\height}\faMobile \ 0930-134-819} \\
-\end{tabularx}
+\end{CJK*}{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	SUMMARY
@@ -88,64 +89,64 @@
 %----------------------------------------------------------------------------------------
 \section{工作經歷}
 
-\begin{joblong}{AI 工程師 - 台新銀行}{2025/07 - 現在}
+\begin{CJK*}{UTF8}{gbsn}{joblong}{AI 工程師 - 台新銀行}{2025/07 - 現在}
 \item 開發 Breeze-ASR-25 語音辨識 API，取代原有 Whisper 模型，提升銀行應用場景的語音轉文字準確率
 \item 建置虛擬人串流系統，設計負載平衡與資源配置機制，實現多人同時使用的客服應用
 \item 使用 Flux 模型實作圖片生成 API，新增去背與疊圖功能
 \item 開發 Wan 系列模型影片生成流程，將輸出時長從 5 秒延長至 30 秒
-\end{joblong}
+\end{CJK*}{UTF8}{gbsn}{joblong}
 
-\begin{joblong}{AI 工程師 - 新光金控}{2024/09 - 2025/06}
+\begin{CJK*}{UTF8}{gbsn}{joblong}{AI 工程師 - 新光金控}{2024/09 - 2025/06}
 \item 部署地端 Whisper 模型取代 Azure STT，批次處理時間減少 84\%，會議記錄製作時間節省 60-70\%
 \item 使用 Llama-3.1-8B 開發新光人壽客服話務助理，完成 POC 驗證並獲主管核准
 \item 建置醫囑辨識 POC，整合 Gemma-3-27B 與 OCR，辨識準確率達 70-80\%，單張處理時間 <30 秒
 \item 建立保單知識庫 RAG 系統，使用 FAISS 索引 60+ 頁保單條款文件
 \item 維運法遵 AI 比對模型，使用者回報問題平均 4 天內結案
-\end{joblong}
+\end{CJK*}{joblong}
 
-\begin{joblong}{機器學習工程師 - 桑日創意行銷}{2023/12 - 2024/08}
+\begin{CJK*}{UTF8}{gbsn}{joblong}{機器學習工程師 - 桑日創意行銷}{2023/12 - 2024/08}
 \item 開發 AI 聊天機器人，整合 GPT API 至各通訊平台，使用 RAG 架構與 Function Calling 處理結構化資料查詢
 \item 建置語音會議機器人，使用 Fast-Whisper 進行語音轉文字，PyAnnote 進行說話者辨識
 \item 實作會議摘要生成、Markmap 心智圖視覺化、Python-pptx 一鍵 PPT 生成功能
 \item 使用 Cloud Functions 與 Cloud Run 部署服務，Firebase 作為後端資料庫
-\end{joblong}
+\end{CJK*}{joblong}
 
 \begin{joblong}{資料科學家（實習）- 美庫爾}{2023/03 - 2023/09}
 \item 為 L'Oréal 建置自動化資料管線，整合 10 個資料源，使用 GCP 服務（Dataflow、Cloud Functions、Airflow、BigQuery）
 \item 開發 KFC 顧客分群模型（K-means）與產品偏好預測（SVD++）
-\end{joblong}
+\end{CJK*}{joblong}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{技術能力}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
+\begin{CJK*}{UTF8}{gbsn}{tabularx}{\linewidth}{@{}l X@{}}
 LLM/SLM &  Llama 3.1、Gemma-3、GPT API、LangChain、RAG、FAISS、Prompt Engineering \\
 語音與視覺 &  Whisper、Breeze-ASR、Fast-Whisper、PyAnnote、OCR、Flux、Wan \\
 雲端與 MLOps &  GCP（Cloud Functions、Cloud Run、BigQuery、Dataflow）、Azure、Airflow、Docker、Git \\
 程式語言 &  Python、SQL、Flask、FastAPI、Streamlit \\
 資料庫 &  Firebase、MySQL、Redis、BigQuery \\
-\end{tabularx}
+\end{CJK*}{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{學歷}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\begin{CJK*}{UTF8}{gbsn}{tabularx}{\linewidth}{@{}l X@{}}	
 2021 - 2023 & 國立臺北商業大學 財務金融研究所 碩士 \\
 & 論文：利用情感分析和交易策略預測金融市場走勢 \\[3pt]
 2016 - 2020 & 銘傳大學 財務金融學系 學士 \\
-\end{tabularx}
+\end{CJK*}{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 \section{證照}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
+\begin{CJK*}{UTF8}{gbsn}{tabularx}{\linewidth}{@{}l X@{}}
 Microsoft &  Azure Data Scientist Associate、Azure AI Engineer Associate \\
 Google &  Google Analytics 個人認證 \\
 語言 &  TOEIC 700 \\
-\end{tabularx}
+\end{CJK*}{tabularx}
 
 \vfill
 \center{\footnotesize 最後更新：\today}
