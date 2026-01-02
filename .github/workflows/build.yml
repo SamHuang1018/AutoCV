@@ -8,18 +8,25 @@ jobs:
         include:
           - file: cv_en
             lang: en
+            compiler: pdflatex
           - file: cv_zh
             lang: zh
+            compiler: xelatex  # 中文需要 xelatex
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+      
       - name: Build LaTeX - ${{ matrix.lang }}
         uses: dante-ev/latex-action@latest
         with:
           root_file: ${{ matrix.file }}
           working_directory: .
+          compiler: ${{ matrix.compiler }}
+          args: -interaction=nonstopmode -file-line-error
+      
       - name: move
         run: mkdir -p github_artifacts && mv ./${{ matrix.file }}.pdf ./github_artifacts/
+      
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
